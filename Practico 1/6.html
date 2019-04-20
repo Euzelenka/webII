@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>inputs</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  </head>
+  <body>
+    <p>CUANTOS INPUTS DESEA SUMAR?</p>
+    <div id="insertar">
+      <input type="number" name="cant" value="">
+      <button onclick="myFunction(insertar)">Enviar</button>
+    </div>
+
+    <script>
+          function myFunction(divName) {
+            document.write(divName);
+            var cantInput = document.getElementsByName('cant');
+            document.write(cantInput);
+            var newdiv = document.createElement('div');
+            newdiv.innerHTML = "<br><input type='text' name='dia_"+cantInput+"'>";
+            document.getElementById(divName).appendChild(newdiv);
+          }
+    </script>
+  </body>
+</html>
