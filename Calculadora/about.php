@@ -5,7 +5,7 @@ function about($nombre=['']) {
   <html>
     <head>
 
-      <base href="'.'http://'.$_SERVER['SERVER_NAME'] . dirname($_SERVER['PHP_SELF']).'/'.'" target="_blank">
+      <base href="http://'.$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]).'/" target="_blank">
       <meta charset="utf-8">
       <title>Calculadora</title>
     </head>
