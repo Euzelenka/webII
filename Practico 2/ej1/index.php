@@ -1,8 +1,8 @@
 <?php
+require_once "usuario.php";
 
 function home() {
   $Titulo = "Lista de Usuarios";
-
  ?>
 
 <!DOCTYPE html>
@@ -16,11 +16,11 @@ function home() {
     <h1><?php echo $Titulo; ?></h1>
     <div class="container">
       <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+        <?php
+            foreach (getUsuarios() as $usuario) {
+              echo '<li class="list-group-item">'.$usuario['nombre'].', '.$usuario['direccion'].', '.$usuario['telefono'].'</li>';
+            }
+         ?>
       </ul>
     </div>
 
