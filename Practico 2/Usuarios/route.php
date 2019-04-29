@@ -1,6 +1,7 @@
 <?php
 
 include_once 'index.php';
+include_once 'usuario.php';
 
 
 function parseURL($url){
@@ -15,6 +16,11 @@ function parseURL($url){
 if(isset($_GET['action'])){
   if($_GET['action'] == '') {
     home();
+  }
+  else {
+    if($_GET['action'] == 'agregar') {
+      addUsuario();
+    }
   }
 
 

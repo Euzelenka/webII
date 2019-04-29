@@ -3,6 +3,7 @@ require_once "usuario.php";
 
 function home() {
   $Titulo = "Lista de Usuarios";
+
  ?>
 
 <!DOCTYPE html>
@@ -26,18 +27,18 @@ function home() {
 
     <div class="container">
       <h2>Formulario</h2>
-      <form>
+      <form method="post" action="agregar">
           <div class="form-group">
-            <label for="exampleInputEmail1">Nombre</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nombre">
+            <label for="exampleInputnombre">Nombre</label>
+            <input type="text" class="form-control" id="formnombre" name="formnombre">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Direccion</label>
-            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Direccion">
+            <label for="exampleInputdireccion">Direccion</label>
+            <input type="text" class="form-control" id="formdireccion" name="formdireccion">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword1">Telefono</label>
-            <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefono">
+            <label for="exampleInputtelefono">Telefono</label>
+            <input type="number" class="form-control" id="formtelefono" name="formtelefono">
           </div>
           <button type="submit" class="btn btn-primary">Crear Usuario</button>
       </form>
