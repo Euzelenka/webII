@@ -7,6 +7,7 @@ $parseURL = explode('/', $_GET['action']);
 
 if(isset($parseURL[0])){
   if($_GET['action'] == '') {
+    // updateUsuario();           para probar el UPDATE
     home();
   }
   elseif($parseURL[0] == 'agregar') {

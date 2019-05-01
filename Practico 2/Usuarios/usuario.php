@@ -27,9 +27,18 @@ function addUsuario() {
 
 }
 
+function updateUsuario() {
+  $db = connect();
+  $id = 3;
+  $sentencia = $db->prepare("UPDATE usuario SET nombre='lucio' WHERE id=$id");
+  $sentencia->execute(array($id));
+
+
+}
+
 function deleteUsuario($id_usuario) {
   $db = connect();
-  $sentencia = $db->prepare( "delete from usuario where id=$id_usuario");
+  $sentencia = $db->prepare( "DELETE FROM usuario WHERE id=$id_usuario");
   $sentencia->execute(array($id_usuario));
   header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 }
