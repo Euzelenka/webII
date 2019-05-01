@@ -19,7 +19,7 @@ function home() {
       <ul class="list-group">
         <?php
             foreach (getUsuarios() as $usuario) {
-              echo '<li class="list-group-item">'.$usuario['nombre'].', '.$usuario['direccion'].', '.$usuario['telefono'].'</li>';
+              echo '<li class="list-group-item">'.$usuario['nombre'].', '.$usuario['direccion'].', '.$usuario['telefono'].'<a href="eliminar/'.$usuario['id'].'">Eliminar</a></li>';
             }
          ?>
       </ul>

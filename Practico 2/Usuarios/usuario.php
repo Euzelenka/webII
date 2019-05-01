@@ -23,7 +23,14 @@ function addUsuario() {
   $sentencia = $db->prepare("INSERT INTO usuario(nombre, direccion, telefono) VALUES(?,?,?)");
   $sentencia->execute(array($nombre, $direccion, $telefono));
  }
- header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"])); 
+ header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 
+}
+
+function deleteUsuario($id_usuario) {
+  $db = connect();
+  $sentencia = $db->prepare( "delete from usuario where id=$id_usuario");
+  $sentencia->execute(array($id_usuario));
+  header("Location: http://".$_SERVER["SERVER_NAME"] . dirname($_SERVER["PHP_SELF"]));
 }
  ?>

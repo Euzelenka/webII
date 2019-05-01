@@ -3,27 +3,19 @@
 include_once 'index.php';
 include_once 'usuario.php';
 
+$parseURL = explode('/', $_GET['action']);
 
-function parseURL($url){
-
-  $urlExplode = explode('/', $url);  //Crea un arreglo
-  $arrayReturn[ConfigApp::$ACTION] = $urlExplode[ACTION];
-  $arrayReturn[ConfigApp::$PARAMS] = isset($urlExplode[VALOR1]) ? array_slice($urlExplode,1) : null;
-
-  return $arrayReturn;
-}
-
-if(isset($_GET['action'])){
+if(isset($parseURL[0])){
   if($_GET['action'] == '') {
     home();
   }
-  else {
-    if($_GET['action'] == 'agregar') {
+  elseif($parseURL[0] == 'agregar') {
       addUsuario();
     }
+  else {
+    if ($parseURL[0] == 'eliminar') {
+      deleteUsuario($parseURL[1]);
+    }
   }
-
-
-
 }
  ?>
