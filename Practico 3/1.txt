@@ -1,0 +1,12 @@
+Responda y justifique (Para discutir en la proxima teoria de BBDD).
+a) Las imágenes y videos, se pueden almacenar en una BBDD ?
+b) Cómo piensa puede tener asociada una imagen a un registro (por ejemplo, la foto carnet de un usuario?)
+c) Cómo funcionan las búsquedas de un tipo de imágenes?
+
+a) para las imagenes se pueden convertir a binario y asi guardarlas.
+En cuanto a los videos se recomienda guardar una referencia del nombre y/o ruta.
+
+b) Se puede realizar un campo donde se guarda la foto, de tipo Blob. Y antes de guardar la imagen debemos
+procesarla para convertirla en binario.
+
+c) 

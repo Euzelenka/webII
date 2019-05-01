@@ -1,0 +1,5 @@
+Piense/busque ejemplos concretos de porque se utilizan archivos en vez de una BBDD
+
+
+Se utilizan archivos, cuando los datos son pocos, cuando los accesos son minimos y cuando la redundancia no es un problema.
+Redundancia: gran duplicidad de los archivos.
